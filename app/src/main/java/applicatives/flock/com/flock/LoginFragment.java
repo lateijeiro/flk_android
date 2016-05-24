@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageInstaller;
 import android.opengl.Visibility;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.telecom.Call;
 import android.util.Log;
 import android.view.LayoutInflater;
