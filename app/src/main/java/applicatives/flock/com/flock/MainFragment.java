@@ -135,6 +135,7 @@ public class MainFragment extends Fragment {
     private void setupLoginButton(View view) {
         LoginButton buttonLogin = (LoginButton) view.findViewById(R.id.login_button);
         buttonLogin.setFragment(this);
+        //I set up the permissions I want to ask for
         buttonLogin.setReadPermissions("user_friends");
         buttonLogin.registerCallback(callbackManager, callback);
     }
