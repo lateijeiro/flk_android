@@ -1,8 +1,8 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="applicatives.flock.com.flock.MainFragment">
+             tools:context=".LoginFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -20,4 +20,4 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp" />
 
-</RelativeLayout>
+</FrameLayout>

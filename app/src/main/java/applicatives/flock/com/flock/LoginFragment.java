@@ -2,6 +2,8 @@ package applicatives.flock.com.flock;
 
 
 import android.content.Intent;
+import android.content.pm.PackageInstaller;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telecom.Call;
@@ -10,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
@@ -27,7 +30,7 @@ import com.facebook.login.widget.LoginButton;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {
+public class LoginFragment extends Fragment {
 
     private TextView textDetails;
 
@@ -45,6 +48,7 @@ public class MainFragment extends Fragment {
         displayWelcomeMessage(profile);
 
 
+
     }
 
     @Override
@@ -58,7 +62,7 @@ public class MainFragment extends Fragment {
     }
 };
 
-    public MainFragment() {
+    public LoginFragment() {
         // Required empty public constructor
     }
 
@@ -119,8 +123,11 @@ public class MainFragment extends Fragment {
 
     private void displayWelcomeMessage(Profile profile){
 
-        if(profile != null){
-            textDetails.setText("Welcome "+profile.getName());
+        if(SessionManager.isLoggedIn()){
+            textDetails.setText("Logged "+profile.getName());
+            
+        }else{
+            textDetails.setText("Logged out");
         }
 
     }
@@ -148,6 +155,7 @@ public class MainFragment extends Fragment {
             protected void onCurrentProfileChanged(Profile oldProfile, Profile newProfile) {
                 Log.d("New Profile ", "" + newProfile);
                 displayWelcomeMessage(newProfile);
+
             }
 
         };
