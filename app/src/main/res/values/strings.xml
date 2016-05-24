@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Flock</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_id">872389579550854</string>
+</resources>
